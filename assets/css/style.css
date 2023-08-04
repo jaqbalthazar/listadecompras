@@ -1,0 +1,116 @@
+*:not(head, style, script) {
+  margin: 0;
+  padding: 0;
+  width: stretch;
+  float: left;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: "Poppins";
+  border: none;
+  /* box-shadow: 0 0 0 2px #c300ff; */
+}
+html,
+body,
+#__nuxt,
+#__nuxt > div {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  align-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.product > div {
+  padding: 0.5rem;
+}
+
+.app {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 5fr min-content 4fr;
+}
+input,
+button {
+  padding: 1rem;
+  width: 100%;
+}
+
+.price__total {
+  background-color: #111;
+  padding: 1rem;
+  color: #fff;
+}
+
+.product__form {
+  width: 100%;
+  padding: 1rem;
+  background-color: #eee;
+}
+.product__form > div {
+  padding: 0.5rem;
+}
+.product__form button,
+.product__form input {
+  border-radius: 1rem;
+}
+.products__list {
+  height: 100%;
+  overflow: scroll;
+  background-color: rgb(255, 255, 255);
+}
+.products__list__header {
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+  align-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: sticky;
+  padding: 0.5rem;
+  background-color: #fff;
+  z-index: 1;
+}
+.products__list__header div {
+  padding: 0.5rem;
+}
+.product__price,
+.product__amount {
+  width: 50%;
+}
+.product__amount input {
+  text-align: center;
+}
+
+.product__amount .button__remove,
+.product__amount .button__add {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+}
+
+.product__amount .button__add {
+  right: 0%;
+}
+
+.product__list__remove {
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5rem;
+  border-radius: 4rem;
+}
+.product__add > button {
+  background-color: blueviolet;
+  color: #fff;
+}
+.counter > div {
+  width: 33.33%;
+  text-align: center;
+}
