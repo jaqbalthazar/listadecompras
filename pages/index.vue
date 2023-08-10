@@ -6,14 +6,6 @@
     price: 0,
     amount: 1,
   });
-  function removeProductAmount(product) {
-    if (product.amount > 0) {
-      product.amount--;
-    }
-  }
-  function increaseProductAmount(product) {
-    product.amount++;
-  }
 
   function addProductToList() {
     productList.value.push({ ...productNew.value });
@@ -58,7 +50,7 @@
             {{ product.name }}
           </div>
           <div>
-            {{ product.price }}
+            <ProductCounter :product="product" :prop="'price'" />
           </div>
           <div class="counter">
             <div @click="removeProductAmount(product)">-</div>
@@ -100,23 +92,11 @@
           placeholder="Preço"
         />
       </div>
-      <div class="product__amount">
-        <input
-          type="number"
-          v-model.number="productNew.amount"
-          placeholder="Qtd"
-        />
-        <button class="button__remove" @click="removeProductAmount(productNew)">
-          -
-        </button>
-        <button class="button__add" @click="increaseProductAmount(productNew)">
-          +
-        </button>
-      </div>
+      <ProductCounter :product="productNew" :prop="'amount'" />
+
       <div class="product__add">
         <button @click="addProductToList()">+</button>
       </div>
     </div>
   </div>
 </template>
-

@@ -11,6 +11,9 @@
   border: none;
   /* box-shadow: 0 0 0 2px #c300ff; */
 }
+.p1 {
+  padding: 0.25rem;
+}
 html,
 body,
 #__nuxt,
@@ -26,6 +29,10 @@ body,
   padding: 0.5rem;
   align-content: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.product input[type="number"] {
+  padding: 0rem;
 }
 .product > div {
   padding: 0.5rem;
@@ -91,9 +98,11 @@ button {
 
 .product__amount .button__remove,
 .product__amount .button__add {
-  width: 48px;
-  height: 48px;
+  width: fit-content;
   position: absolute;
+}
+.product__amount button {
+  padding: 1rem;
 }
 
 .product__amount .button__add {
